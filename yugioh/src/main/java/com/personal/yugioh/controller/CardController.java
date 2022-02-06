@@ -2,6 +2,7 @@ package com.personal.yugioh.controller;
 
 import com.personal.yugioh.service.CardBusiness;
 import com.personal.yugioh.entity.Card;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class CardController {
 
-    @Autowired
-    private CardBusiness cardBusiness;
+    private final CardBusiness cardBusiness;
 
     @GetMapping("/cards")
     public ResponseEntity<List<Card>> getYugiohCards(){
