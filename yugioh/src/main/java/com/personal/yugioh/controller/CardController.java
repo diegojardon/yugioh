@@ -1,6 +1,6 @@
 package com.personal.yugioh.controller;
 
-import com.personal.yugioh.business.CardBusiness;
+import com.personal.yugioh.service.CardBusiness;
 import com.personal.yugioh.entity.Card;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS Card(idCard INT PRIMARY KEY AUTO_INCREMENT, cardName VARCHAR(80) NOT NULL, cardCode VARCHAR(15) NOT NULL, cardEdition VARCHAR(30) NOT NULL, cardPrice FLOAT NOT NULL)ENGINE=INNODB;
+INSERT INTO Card (idCard, cardName, cardCode, cardEdition, cardPrice) VALUES (1, 'Right arm of the forbidden one', 'YGLD-ENA20', 'Normal', 4.4);

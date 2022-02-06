@@ -1,4 +1,4 @@
-package com.personal.yugioh.business;
+package com.personal.yugioh.service;
 
 import com.personal.yugioh.entity.Card;
 

@@ -1,7 +1,10 @@
 package com.personal.yugioh.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity(name = "Card")
 public class Card {
 
@@ -11,36 +14,6 @@ public class Card {
     private String cardName;
     private String cardCode;
     private String cardEdition;
+    private Float cardPrice;
 
-    public int getIdCard() {
-        return idCard;
-    }
-
-    public void setIdCard(int idCard) {
-        this.idCard = idCard;
-    }
-
-    public String getCardName() {
-        return cardName;
-    }
-
-    public void setCardName(String cardName) {
-        this.cardName = cardName;
-    }
-
-    public String getCardCode() {
-        return cardCode;
-    }
-
-    public void setCardCode(String cardCode) {
-        this.cardCode = cardCode;
-    }
-
-    public String getCardEdition() {
-        return cardEdition;
-    }
-
-    public void setCardEdition(String cardEdition) {
-        this.cardEdition = cardEdition;
-    }
 }

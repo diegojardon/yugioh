@@ -1,6 +1,6 @@
-package com.personal.yugioh.business.impl;
+package com.personal.yugioh.service.impl;
 
-import com.personal.yugioh.business.CardBusiness;
+import com.personal.yugioh.service.CardBusiness;
 import com.personal.yugioh.entity.Card;
 import com.personal.yugioh.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
