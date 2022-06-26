@@ -3,9 +3,9 @@ package com.personal.yugioh.dto;
 import lombok.Data;
 
 @Data
-public class YugiohResponse {
+public class YugiohAPIResponse {
 
     private String status;
-    private Data data;
+    private GeneralData data;
 
 }

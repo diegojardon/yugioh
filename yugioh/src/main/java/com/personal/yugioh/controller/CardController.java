@@ -1,25 +1,23 @@
 package com.personal.yugioh.controller;
 
-import com.personal.yugioh.service.CardBusiness;
-import com.personal.yugioh.entity.Card;
+import com.personal.yugioh.dto.CardDto;
+import com.personal.yugioh.service.CardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/yugioh")
 public class CardController {
 
-    private final CardBusiness cardBusiness;
+    private final CardService cardService;
 
-    @GetMapping("/cards")
-    public ResponseEntity<List<Card>> getYugiohCards(){
-        return new ResponseEntity<>(cardBusiness.getAllCards(), HttpStatus.OK);
+    @GetMapping("/card/{cardCode}")
+    public ResponseEntity<CardDto> getYugiohCardByCode(@PathVariable("cardCode") String cardCode,
+                                                       @RequestParam("updatePrice") boolean updatePrice){
+        return new ResponseEntity<>(cardService.getCardInfoByCode(cardCode, updatePrice), HttpStatus.OK);
     }
 
 }
